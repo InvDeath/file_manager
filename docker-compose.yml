@@ -1,0 +1,8 @@
+web:
+  restart: always
+  build: ./web
+  expose:
+    - '8000'
+  volumes:
+    - './web:/web'
+  command: python /web/manage.py runserver 0.0.0.0:8000
