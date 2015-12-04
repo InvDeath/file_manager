@@ -5,7 +5,7 @@ runserver:
 	docker-compose logs web
 
 gulp:
-	docker run -it --rm --privileged=true -v $(shell pwd)/layout:/data miguelalvarezi/nodejs-bower-gulp sh -c 'npm install && bower i --allow-root && gulp'
+	docker run -it --rm --privileged=true -v $(shell pwd)/layout:/data miguelalvarezi/nodejs-bower-gulp sh -c 'npm install && bower i --allow-root --config.interactive=false && gulp'
 
 cli:
 	docker run -it --rm --privileged=true -v $(shell pwd)/layout:/data miguelalvarezi/nodejs-bower-gulp bash
