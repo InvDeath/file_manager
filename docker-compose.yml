@@ -6,3 +6,7 @@ web:
   volumes:
     - './web:/web'
   command: python /web/manage.py runserver 0.0.0.0:8000
+sass:
+  image: miguelalvarezi/nodejs-bower-gulp
+  volumes:
+    - './layout:/data'
