@@ -10,3 +10,4 @@
 /*
  * Custom
  */
+//= partials/files.js
