@@ -14,3 +14,7 @@ clear_docker:
 	docker stop $(shell docker ps -a -q)
 	docker rm $(shell docker ps -a -q)
 	docker rmi $(shell docker ps -a -q)
+
+fix_perms:
+	sudo chown -R $(shell id -u) .
+	sudo chgrp -R $(shell id -g) .
